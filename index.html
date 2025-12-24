@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéDex</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <img src="/logo.svg" alt="PokéDex" class="logo" />
+        </div>
+        <nav class="nav">
+          <button id="nav-home" class="nav-link active" data-page="home">Home</button>
+          <button id="nav-pokedex" class="nav-link" data-page="pokedex">Pokédex</button>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema">
+            <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 3V1M10 19V17M17 10H19M1 10H3M15.657 4.343L17.071 2.929M2.929 17.071L4.343 15.657M15.657 15.657L17.071 17.071M2.929 2.929L4.343 4.343M14 10C14 12.2091 12.2091 14 10 14C7.79086 14 6 12.2091 6 10C6 7.79086 7.79086 6 10 6C12.2091 6 14 7.79086 14 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293C16.3785 14.2075 15.2352 14.8621 14.0001 15.1937C12.765 15.5253 11.4653 15.5232 10.2313 15.1876C8.99722 14.8521 7.85612 14.1938 6.94464 13.2759C6.03316 12.358 5.38019 11.2108 5.04753 9.96986C4.71487 8.72895 4.71269 7.43119 5.04127 6.18908C5.36985 4.94697 6.02049 3.7979 6.93251 2.87787C7.84452 1.95784 8.98817 1.30029 10.2201 0.966883C11.452 0.63348 12.7318 0.63348 13.9637 0.966883C15.1956 1.30029 16.3393 1.95784 17.2513 2.87787C18.1633 3.7979 18.8139 4.94697 19.1425 6.18908C19.4711 7.43119 19.4689 8.72895 19.1363 9.96986C18.8036 11.2108 18.1506 12.358 17.2392 13.2759C16.3277 14.1938 15.1866 14.8521 13.9525 15.1876C12.7185 15.5232 11.4188 15.5253 10.1837 15.1937C8.94858 14.8621 7.80528 14.2075 6.89078 13.293C6.31284 12.7151 5.84951 12.0321 5.52786 11.2814C5.20621 10.5307 5.03217 9.72652 5.01465 8.91178C4.99713 8.09704 5.13648 7.28666 5.42503 6.52746C5.71358 5.76826 6.14581 5.07356 6.69948 4.48115C7.25315 3.88874 7.91755 3.40903 8.65563 3.06929C9.39371 2.72955 10.1919 2.53635 11.0021 2.5C10.5374 3.34864 10.3006 4.30284 10.3166 5.27091C10.3326 6.23898 10.6008 7.18451 11.0929 8.01776C11.585 8.85101 12.2854 9.54316 13.1234 10.0234C13.9614 10.5036 14.9092 10.7568 15.8773 10.7568C16.8454 10.7568 17.7932 10.5036 18.6312 10.0234C19.4692 9.54316 20.1696 8.85101 20.6617 8.01776C21.1538 7.18451 21.422 6.23898 21.438 5.27091C21.454 4.30284 21.2172 3.34864 20.7525 2.5C21.5627 2.53635 22.3609 2.72955 23.099 3.06929C23.8371 3.40903 24.5015 3.88874 25.0551 4.48115C25.6088 5.07356 26.041 5.76826 26.3296 6.52746C26.6181 7.28666 26.7575 8.09704 26.74 8.91178C26.7224 9.72652 26.5484 10.5307 26.2267 11.2814C25.9051 12.0321 25.4418 12.7151 24.8638 13.293H24.8638Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Home Screen -->
+      <div id="home-screen" class="screen active">
+        <section class="home-section">
+          <div class="home-content">
+            <h1 class="home-title">Bem-vindo à PokéDex!</h1>
+            <p class="home-description">
+              Explore o mundo dos Pokémon. Busque, filtre e descubra informações sobre seus Pokémon favoritos.
+            </p>
+            <button id="go-to-pokedex" class="home-cta-btn">Explorar Pokédex</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Pokedex Screen -->
+      <div id="pokedex-screen" class="screen">
+        <!-- Search Section -->
+        <section class="search-section">
+          <div class="search-filters-container">
+            <div class="search-container">
+              <input 
+                type="text" 
+                id="search-input" 
+                class="search-input" 
+                placeholder="Faça uma busca pelo nome do pokémon"
+              />
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="filter-container">
+              <select id="type-filter" class="type-filter-select">
+                <option value="">Todos os tipos</option>
+                <!-- Opções serão inseridas aqui via JavaScript -->
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pokemon Grid -->
+        <main class="main-content">
+          <div id="pokemon-grid" class="pokemon-grid">
+            <!-- Cards serão inseridos aqui via JavaScript -->
+          </div>
+        </main>
+
+        <!-- Pagination -->
+        <footer class="pagination-section">
+          <div class="pagination">
+            <button id="prev-btn" class="pagination-btn">← Anterior</button>
+            <div id="page-numbers" class="page-numbers">
+              <!-- Números de página serão inseridos aqui -->
+            </div>
+            <button id="next-btn" class="pagination-btn">Próximo →</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
