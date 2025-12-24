@@ -70,16 +70,6 @@ npm run build
 npm run preview
 ```
 
-### Configuração para ngrok
-
-Se você estiver usando ngrok para expor o servidor, o arquivo `vite.config.js` já está configurado para aceitar hosts do ngrok. Basta iniciar o servidor normalmente:
-
-```bash
-npm run dev
-```
-
-E então configurar o ngrok apontando para a porta do Vite (geralmente 5173).
-
 ## 🏗️ Estrutura do Projeto
 
 ```
@@ -177,14 +167,6 @@ A aplicação suporta tema claro e escuro:
 ✅ **Design**: Design segue o modelo do Figma e é agradável de usar
 
 ✅ **Uso de Ferramentas**: Vite escolhido adequadamente para melhor DX sem adicionar complexidade
-
-## 🚀 Melhorias Futuras
-
-- [ ] Detalhes do Pokémon em modal ou página dedicada
-- [ ] Favoritos com localStorage
-- [ ] Comparação entre Pokémon
-- [ ] Animações mais elaboradas
-- [ ] Suporte a mais idiomas
 
 ## 📄 Licença
 
